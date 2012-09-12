@@ -1,0 +1,26 @@
+# Sound.py
+#
+# Description:
+# This class takes care of everything you hear! Music and SFX are loaded and played here.
+#
+#
+
+import pygame
+from path import *
+
+class sound():
+	
+	def __init__(self):
+		pygame.mixer.music.load(pathtoscript + "level1.ogg")
+
+		#self.currentsong = pygame.mixer.music
+		#self.currentsong = self.level1song
+
+	def startmusic(self):
+		#if not self.currentsong.get_busy():
+		#self.level1song.play(-1)
+		if not pygame.mixer.music.get_busy():
+			pygame.mixer.music.play(-1)
+
+	def stopmusic(self):
+		self.currentsong.stop()
